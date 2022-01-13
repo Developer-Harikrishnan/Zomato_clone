@@ -1,0 +1,351 @@
+body{
+    margin: auto;
+    background-color: white;
+}
+.mydark{
+    background-color:black;
+    color: slategray
+}
+
+
+#logoTitle {
+    color: whitesmoke;
+    font-size: 30px;
+}
+.social-logo{
+    height: 50px;
+    width: 50px;
+}
+#Search{
+    height: 400px;
+    background-image: url(images/foodWallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size:100% 400px;
+    margin-top: -1.3%;    
+}
+#Logo{
+    width: 150px;
+    height: 150px;
+    background-color:white;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 45%;
+    font-size: 75px;
+    color: red;
+    animation: movelogo 20s infinite ;
+    
+}
+@keyframes movelogo{
+    0% {margin-left: 45%;}
+    20% {margin-left: 45%;}
+    40% {margin-left: 30%;}
+    60% {margin-left: 45%;}
+    80% {margin-left: 60%;}
+    100% {margin-left: 45%;}
+
+}
+
+#Logo > span {
+    position: absolute;
+    margin-top: 18%;
+    margin-left: 31%;
+}
+
+#coupon{
+    height:600px;
+    width:800px;
+    margin-left: 26%;
+    position: absolute;
+    z-index: 500;
+}
+#coupon-btn{
+    font-size:30px;
+    color:white;
+    font-family: cursive;
+    font-weight: bold;
+    margin-left:30%;
+    background-color: black;
+    width: 300px;
+}
+
+
+.coupon-content{
+    height: 250px;
+    width: 350px;
+    display: inline-block;
+}
+.coupon-ads{
+    width: 350px;
+    height: 250px;
+
+}
+
+
+#heading {
+    margin-top:13%;
+    margin-left:27%;
+    font-size:52px;
+    position: absolute;
+    color:whitesmoke;
+}
+
+.dropdown{
+    position: absolute;
+    height: 50px;
+    width: 50%;
+    margin-top:19%;
+    margin-left:27%;
+    
+}
+
+.dropdown-sub{
+    height: 50px;
+    width: 35%;
+    text-align: center;
+}
+.restaurant-select{
+    width:60%;
+}
+
+
+#QuickSearch-heading{
+    color: rgb(165, 82, 82);
+    font-size:35px;
+    display: block;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#QuickSearch-subheading{
+    color: rgb(104, 97, 97);
+    font-size: 20px;
+    margin-left: 2%;
+    line-height: 2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+.tileContainer{
+    float: left;
+    height:180px ;
+    width: 30%;
+    margin-top :2%;
+    margin-left:2%;
+    box-shadow: 10px 20px 15px gray;
+}
+.tileContainer:hover{
+    transform:scale(1.1);
+}
+.tileComponent1{
+    height: 180px;
+    width: 50%;
+    float: left;
+
+}
+.tileComponent2{
+    float: left;
+    margin-left: 5%;
+    margin-top: 12%;
+    height: 100px;
+    width: 40%;
+
+}
+.tileHeading{
+    font-size:25px;
+    color: #d24c4c;
+
+}
+.tileHeading > a{
+    color: #d24c4c !important;
+
+}
+
+.tileSubheading{
+    font-size: 15px;
+    color: #7e776c;
+
+}
+#footer{
+    font-size:18px
+}
+
+
+@media screen and (max-width:1400px) {
+    #Logo{
+        width: 125px;
+        height: 125px;
+        margin-top: 2%;
+        font-size: 68px;
+        
+    }
+    
+    #Logo > span {
+        margin-top: 20%;
+        margin-left: 31%;
+    }
+    #heading {
+        margin-top:13%;
+        margin-left:24%;
+        font-size:52px;
+    }
+    
+    .dropdown{
+        margin-top:19%;
+        margin-left:28%;
+        
+    }
+    #footer {
+        font-size:20px;
+    }
+    
+    
+}
+
+
+@media screen and (max-width:1200px) {
+    #Logo{
+        width: 130px;
+        height: 130px;
+        font-size: 64px;
+        
+    }
+    
+    #Logo > span {
+        margin-top: 16%;
+        margin-left: 31%;
+    }
+    #heading {
+        margin-top:15%;
+        margin-left:23%;
+        font-size:50px;
+    }
+    
+    .dropdown{
+        margin-top:22%;
+        margin-left:29%;
+        
+    }
+    #footer {
+        font-size:20px;
+    }
+    
+}
+
+@media screen and (max-width:1000px) {
+    #Logo{
+        font-size: 67px;
+        margin-top: 3%;
+        
+    }
+    
+    #Logo > span {
+        margin-top: 20%;
+        margin-left: 31%;
+    }
+    #heading {
+        margin-top:20%;
+        margin-left:19%;
+        font-size:46px;
+    }
+    
+    .dropdown{
+        margin-top:27%;
+        margin-left:30%;
+        
+    }
+    .tileContainer{
+        width: 48%;
+        margin-left: 2%;
+        
+    }
+    #footer {
+        font-size:18px;
+    }
+    
+    
+}
+
+@media screen and (max-width:800px) {
+    #Logo{
+        width: 125px;
+        height: 125px;
+        font-size: 67px;
+        margin-top: 3%;
+        margin-left:42%;
+        
+    }
+    
+    #Logo > span {
+        margin-top: 20%;
+        margin-left: 31%;
+    }
+    #heading {
+        margin-top:20%;
+        margin-left:13%;
+        font-size:46px;
+    }
+    
+    .dropdown{
+        margin-top:33%;
+        margin-left:26%;
+        
+    }
+    .tileContainer{
+        width: 43%;
+        margin-top :3%;
+        margin-left: 4%;
+        
+    }
+    #footer {
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    #Logo{
+        width: 110px;
+        height: 110px;
+        font-size: 56px;
+        margin-top: 6%;
+        margin-left: 35%;
+        animation:none;
+    }
+    
+    #Logo > span {
+        margin-top: 15%;
+        margin-left: 30%;
+    }
+    #heading {
+        margin-top:33%;
+        margin-left:11%;
+        font-size:25px;
+    }
+    
+    .dropdown{
+        margin-top:47%;
+        margin-left:25%;
+        
+    }
+    .dropdown-sub{
+        height: 45px;
+        font-size:9px;
+    }
+    
+
+    .tileContainer{
+        width: 84%;
+        margin-left: 8%;
+        margin-top :3%;
+        
+    }
+    #footer{
+        font-size:14px;
+    }
+    
+    
+    
+}

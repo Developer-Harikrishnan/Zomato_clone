@@ -1,0 +1,301 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Zomato</title>
+        
+        <link rel="icon" href="https://img.icons8.com/color/100/000000/food-bar.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="first.js"></script>
+        <link rel="stylesheet" href="first.css">
+    </head>
+
+    <body>
+    <!--Header Start-->
+        <nav id="header" class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a id="logoTitle"class="navbar-brand" href="#">Zomato</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" >
+                    <li><a onclick="changeMode()" href="#"><span class="glyphicon glyphicon-adjust"></span> change mode</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add Restaurant</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        
+
+        <div id="Search" class="container-fluid">
+            <div id="Logo">
+                <span> Z! </span>
+            </div>
+            <div id="heading">
+                Discover the best food & drinks
+            </div>
+            <!--Coupon Start-->
+            
+            <div id="coupon">
+                <div id="coupon-btn">
+                    <span> Deal of the day</span>
+                    <button style="color: tomato;" type="button"onclick="closeDiv()">  &times;</button>
+
+                </div>
+                
+                <div class="coupon-content">
+                    <img src="../images/ad1.jpg" class="coupon-ads" alt="ad1">
+                </div>
+                <div class="coupon-content">
+                    <img src="../images/ad2.jpg" class="coupon-ads" alt="ad2">
+                </div>
+                <div class="coupon-content">
+                    <img src="../images/ad3.jpg" class="coupon-ads" alt="ad3">
+                </div>
+                <div class="coupon-content">
+                    <img src="../images/ad4.jpg" class="coupon-ads" alt="ad4">
+                </div>
+                
+                <!--Coupon Start-->
+
+
+            </div>
+            <div class="dropdown" >
+                <select class="dropdown-sub" id="city" onChange="getHotel()">
+                    <option>----SELECT CITY----</option>
+                    
+                </select>
+                <select class="restaurant-select dropdown-sub" id="hotels">
+                    <option>----SELECT RESTAURANT----</option>
+    
+                </select>
+            </div>
+            
+        </div>
+    <!--Header End-->
+
+    
+
+
+
+    <!--Search Start-->
+
+        <div class="container">
+                <span id="QuickSearch-heading">
+                    Quick Search
+                </span>
+                <span id="QuickSearch-subheading">
+                    Discover Restaurant By Meals
+                </span>
+                <div class="mainTile">
+                    <div class="tileContainer">
+                        <div class="tileComponent1">
+                            <div id="imgComp" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#imgComp" data-slide-to="0" class="active"></li>
+                                    <li data-target="#imgComp" data-slide-to="1"></li>
+                                    <li data-target="#imgComp" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="images/breakfast food 1.png" alt="BF1" style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/Breakfast-Foods2.png" alt="BF2"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/breakfast-foods3.png" alt="BF3"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                        <div class="tileComponent2">
+                            <div class="tileHeading">
+                               <a href="../listing_page/listing.html">Breakfast</a> 
+                            </div>
+                            <div class="tileSubheading">
+                                Enjoy Your Breakfast Meal
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tileContainer">
+                        <div class="tileComponent1">
+                            <div id="img1Comp" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#img1Comp" data-slide-to="0" class="active"></li>
+                                    <li data-target="#img1Comp" data-slide-to="1"></li>
+                                    <li data-target="#img1Comp" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="images/lunch copy.png" alt="Lunch1" style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/lunch 1.png" alt="Lunch2"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/lunch2.png" alt="Lunch3"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tileComponent2">
+                            <div class="tileHeading">
+                                <a href="../listing_page/listing.html">Lunch</a>
+                            </div>
+                            <div class="tileSubheading">
+                                Enjoy Your Lunch!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tileContainer">
+                        <div class="tileComponent1">
+                            <div id="img2Comp" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#img2Comp" data-slide-to="0" class="active"></li>
+                                    <li data-target="#img2Comp" data-slide-to="1"></li>
+                                    <li data-target="#img2Comp" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="images/dinner 3.png" alt="Dinner1" style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/dinner2.png" alt="Dinner2"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/dinner.png" alt="Dinner3"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tileComponent2">
+                            <div class="tileHeading">
+                                <a href="../listing_page/listing.html">Dinner</a>
+                            </div>
+                            <div class="tileSubheading">
+                                Enjoy Your Favorite Food
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tileContainer">
+                        <div class="tileComponent1">
+                            <div id="img3Comp" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#img3Comp" data-slide-to="0" class="active"></li>
+                                    <li data-target="#img3Comp" data-slide-to="1"></li>
+                                    <li data-target="#img3Comp" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="images/coffee2.png" alt="snack1" style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/coffee.png" alt="snack2"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/cookie.png" alt="snack3"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tileComponent2">
+                            <div class="tileHeading">
+                                <a href="../listing_page/listing.html">Coffee</a>
+                            </div>
+                            <div class="tileSubheading">
+                                Enjoy Your Evening coffee
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tileContainer">
+                        <div class="tileComponent1">
+                            <div id="img4Comp" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#img4Comp" data-slide-to="0" class="active"></li>
+                                    <li data-target="#img4Comp" data-slide-to="1"></li>
+                                    <li data-target="#img4Comp" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="images/drinks2.png" alt="Drinks1" style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/drinks.png" alt="Drinks2"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/drinks3.png" alt="Drinks3"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tileComponent2">
+                            <div class="tileHeading">
+                                <a href="../listing_page/listing.html">Drinks</a>
+                            </div>
+                            <div class="tileSubheading">
+                                Raise your glasses
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tileContainer">
+                        <div class="tileComponent1">
+                            <div id="img5Comp" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#img5Comp" data-slide-to="0" class="active"></li>
+                                    <li data-target="#img5Comp" data-slide-to="1"></li>
+                                    <li data-target="#img5Comp" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="images/nightlife.png" alt="ngt1" style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/nightlife2.png" alt="ngt2"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/nightlife3.png" alt="ngt3"  style="width: 100%;height: 180px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tileComponent2">
+                            <div class="tileHeading">
+                                <a href="../listing_page/listing.html">Night Life</a>
+                            </div>
+                            <div class="tileSubheading">
+                                Enjoy the Night
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            
+        </div>
+        
+        <hr>
+        <!-- Footer Starts -->
+        <footer id="footer">
+            <center><span>&copy; Copyrights Zomato</span></center>
+        </footer>
+         <!-- Footer ends -->
+
+        <script>
+            window.onload=openDiv()
+            window.onload=getCity()
+        </script>
+
+    </body>
+</html>
